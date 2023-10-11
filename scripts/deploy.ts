@@ -1,9 +1,10 @@
 import { ethers } from "hardhat";
-
+import hre from "hardhat";
 async function main() {
+  // console.log(hre);
   console.log("first");
-  const Simple = ethers.getContractFactory("SimpleStorage");
-  (await Simple).deploy();
+  const PatientStorageContract = ethers.getContractFactory("PatientStorage");
+  (await PatientStorageContract).deploy();
   console.log("done");
 }
 
